@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://receipes.is-a.dev/pfp.jpg" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta content="receipes' Site" property="og:title" />
+    <meta content="My portfolio" property="og:description" />
+    <meta content="https://receipes.is-a.dev/pfp.jpg" property="og:image" />
+    <meta content="#ffa500" data-react-helmet="true" name="theme-color" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>receipes - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+	background-color: rgba(10, 10, 10, 255);
+	color: white;
+}
+#main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+.material-symbols-outlined {
+  -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+  text-decoration: none;
+  font-size: 25px;
+  vertical-align: text-bottom;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+a {
+  -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.widget {
+  border-radius: 8px;
+  background-color: rgba(30,30,30,255);
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  width: 50%;
+  padding: 10px;
+  flex-grow: 1;
+}
+#page {
+  -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+	opacity: 0;
+	transition: 0.1s;
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#animateText {
+	transition: 0.1s
+}
+#terminal__prompt--cursor {  
+  display: block;  
+  height: 17px;  
+  width: 8px;  
+  margin-left: 9px;  
+  animation: blink 1200ms linear infinite;
+  position: absolute;
+  bottom: 100%;
+}
+
+@keyframes blink {  
+  0% {    
+    opacity: 1;
+  }  
+  49% {    
+    opacity: 1;
+  }  
+  50% {    
+    opacity: 0;
+  }  
+  99% {    
+    opacity: 0;  
+  }  100% {    
+    opacity: 0;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#terminal {
+	color: rgba(230, 230, 230, 255);
+	font-family: Consolas, monaco, monospace;
+	text-align: center;
+}
+#terminal::after {
+	content: "_";
+	animation: blink 1200ms linear infinite;
+    margin-left: 1px;
+}
+
+.term {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+  transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(190,190,190); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+    </style>
+</head>
+
+<body>
+    <div id="term" class="term">
+        <span id="terminal"></span>
+    </div>
+    <div id="page">
+        <h3 id="animateText">Hello, I am receipes!</h3>
+    </div>
+    <div id="main" style="display: none !important;">
+        <div class="widget" style="padding-left: 35px;">
+            <h3><img style="border-radius: 50%;vertical-align: middle;" alt="profile picture" src="pfp.jpg" width="100" height="100"><span style="padding-left: 20px;"><a href="https://github.com/receipes">receipes</a><br><br><span style="color: rgba(150,150,150,255);">chillin 💯</span> | receipes#3705 | <a href="https://github.com/receipes">GitHub</a></h3>
+        </div>
+        <div class="widget" style=" max-width: 100%; width: 100%; height:100%;">
+            <h3 style="margin-left: 15px;line-height: 1px;">My projects: </h3>
+            <div id="repos" style="display:flex;flex-wrap: wrap;">
+
+            </div>
+            <div id="template" hidden>
+                <div class="widget" onclick="{url}" style="background-color: rgba(20,20,20,255);padding: 35px; width:40%;max-width: 100%;">
+                    <h4><a href="{url}">{repo name}</a></h4>
+                    <p>{description}</p>
+                    <h4 style="color: rgba(120,120,120,255)">{language} | <span style="color:white;"><span class="material-symbols-outlined">star</span>: {star_count}</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var _0x20922e=_0x3e8d;(function(_0x48fc30,_0x5a83c3){var _0x414bff=_0x3e8d,_0x341a0d=_0x48fc30();while(!![]){try{var _0x2e5107=parseInt(_0x414bff(0x105))/0x1*(parseInt(_0x414bff(0x136))/0x2)+parseInt(_0x414bff(0x12b))/0x3*(-parseInt(_0x414bff(0x12d))/0x4)+-parseInt(_0x414bff(0x10f))/0x5*(-parseInt(_0x414bff(0x114))/0x6)+parseInt(_0x414bff(0x113))/0x7+parseInt(_0x414bff(0x106))/0x8+-parseInt(_0x414bff(0x10b))/0x9+parseInt(_0x414bff(0x11d))/0xa*(-parseInt(_0x414bff(0x137))/0xb);if(_0x2e5107===_0x5a83c3)break;else _0x341a0d['push'](_0x341a0d['shift']());}catch(_0x95af46){_0x341a0d['push'](_0x341a0d['shift']());}}}(_0x3dd8,0x99a5e));function _0x3e8d(_0x14ecd2,_0x72d1c5){var _0x3dd8d3=_0x3dd8();return _0x3e8d=function(_0x3e8d6b,_0x5de3b5){_0x3e8d6b=_0x3e8d6b-0x100;var _0x298d07=_0x3dd8d3[_0x3e8d6b];return _0x298d07;},_0x3e8d(_0x14ecd2,_0x72d1c5);}var animating=![];let animateQueue=[];const speed=0x3c;function getTimeLength(_0x2dcbdb){var _0x32f44e=_0x3e8d;return _0x2dcbdb[_0x32f44e(0x132)]*speed;}function animate(_0x13aadf,_0x1a7614){var _0x2f3182=_0x3e8d;if(animating==![]){animating=!![];_0x1a7614&&(document[_0x2f3182(0x10d)](_0x2f3182(0x104))[_0x2f3182(0x126)]='');for(let _0x2be952=0x0;_0x2be952<_0x13aadf[_0x2f3182(0x132)];_0x2be952++){setTimeout(()=>{var _0x312fe0=_0x2f3182;document['getElementById'](_0x312fe0(0x104))[_0x312fe0(0x126)]+=_0x13aadf[_0x312fe0(0x117)](_0x2be952,_0x2be952+0x1);},_0x2be952*speed);}return setTimeout(()=>{var _0x2b0f4c=_0x2f3182;animating=![];for(var _0x4af622=0x0;_0x4af622<animateQueue[_0x2b0f4c(0x132)];_0x4af622++){var _0x51251b=animateQueue[_0x4af622]['tex'],_0x1cd982=animateQueue[_0x4af622][_0x2b0f4c(0x127)];animate(_0x51251b,_0x1cd982);}animateQueue=[];},_0x13aadf[_0x2f3182(0x132)]*speed),_0x13aadf[_0x2f3182(0x132)]*speed;}else animateQueue['push']({'tex':_0x13aadf,'res':_0x1a7614});}function _0x3dd8(){var _0x266bba=['stargazers_count','43743SnYWbS','<span\x20style=\x22color:\x20rgba(50,255,50,255);\x22>','160XysAJm','then','{repo\x20name}','<br>','hidden','length','main','hostname','removeProperty','62nQYXxW','11PHBQgy','https://api.fuchsiax.dev/getip','addEventListener','Hello\x20','term','terminal','16725pATaLz','9154248wYrUvH','https://api.fuchsiax.dev/getcountry','Welcome!','replaceAll','page','6708735qseOly','<br><span\x20style=\x22color:\x20rgba(50,255,50,255);\x22>','getElementById','{description}','175WvMCci','description','I\x20currently\x20know\x205\x20programming\x20languages.','language','34384dQbVLI','175206OKcsMg','style','template','substring','./receipes','text','{language}','My\x20primary\x20programming\x20language\x20is\x20Lua,\x20but\x20I\x20also\x20code\x20in\x20java\x20and\x20PHP.','opacity','7317060PeRvgP','country_name','\x20~\x20</span>$\x20','animateText','None','I\x20am\x20a\x20developer.','html_url','{star_count}','Anyways,\x20welcome\x20to\x20my\x20website!','innerHTML','res','setProperty','repos'];_0x3dd8=function(){return _0x266bba;};return _0x3dd8();}function instAnim(_0x215c7a,_0x581c6a){var _0x2f30c7=_0x3e8d;_0x581c6a&&(document[_0x2f30c7(0x10d)](_0x2f30c7(0x104))[_0x2f30c7(0x126)]=''),document['getElementById']('terminal')['innerHTML']+=_0x215c7a;}document[_0x20922e(0x101)]('DOMContentLoaded',()=>{var _0x5ec053=_0x20922e,_0x442264,_0x3015df;fetch(_0x5ec053(0x100))[_0x5ec053(0x12e)](_0x4a24a5=>_0x4a24a5['text']())[_0x5ec053(0x12e)](_0x4525a5=>{var _0x5ca245=_0x5ec053;_0x3015df=_0x4525a5,instAnim(_0x5ca245(0x12c)+_0x3015df+'@'+location[_0x5ca245(0x134)]+_0x5ca245(0x11f),!![]);}),setTimeout(()=>{var _0x335f0f=_0x5ec053;fetch('https://api.fuchsiax.dev/getip')[_0x335f0f(0x12e)](_0x3f7e85=>_0x3f7e85[_0x335f0f(0x119)]())[_0x335f0f(0x12e)](_0x5d786e=>{var _0x2c7222=_0x335f0f;_0x3015df=_0x5d786e,instAnim(_0x2c7222(0x12c)+_0x3015df+'@'+location[_0x2c7222(0x134)]+_0x2c7222(0x11f),!![]),setTimeout(()=>{var _0x4994ae=_0x2c7222;_0x442264=animate(_0x4994ae(0x102)+_0x5d786e+'!\x20'),setTimeout(()=>{var _0xa322e4=_0x4994ae;fetch(_0xa322e4(0x107))['then'](_0x14f175=>_0x14f175['json']())[_0xa322e4(0x12e)](_0x38dad8=>{var _0x17e53b=_0xa322e4;instAnim(_0x17e53b(0x10c)+_0x3015df+'@'+location[_0x17e53b(0x134)]+_0x17e53b(0x11f),![]),_0x442264=animate('Looks\x20like\x20we\x20have\x20someone\x20from\x20'+_0x38dad8[_0x17e53b(0x11e)]+',\x20that\x27s\x20cool!'),setTimeout(()=>{var _0x222121=_0x17e53b;instAnim(_0x222121(0x10c)+_0x3015df+'@'+location[_0x222121(0x134)]+_0x222121(0x11f),![]),setTimeout(()=>{var _0x253272=_0x222121;animate('Anyways,\x20welcome\x20to\x20my\x20website!',![]),setTimeout(()=>{var _0x32204f=_0x3e8d;instAnim(_0x32204f(0x10c)+_0x3015df+'@'+location[_0x32204f(0x134)]+_0x32204f(0x11f),![]),animate(_0x32204f(0x118),![]),setTimeout(()=>{var _0x49ea13=_0x32204f;instAnim(_0x49ea13(0x130)),setTimeout(()=>{var _0x3a5b66=_0x49ea13;document[_0x3a5b66(0x10d)](_0x3a5b66(0x103))[_0x3a5b66(0x115)][_0x3a5b66(0x128)](_0x3a5b66(0x11c),'0'),document[_0x3a5b66(0x10d)](_0x3a5b66(0x10a))[_0x3a5b66(0x115)][_0x3a5b66(0x128)](_0x3a5b66(0x11c),'1'),setTimeout(()=>{var _0x1ad0d5=_0x3a5b66;document[_0x1ad0d5(0x10d)](_0x1ad0d5(0x120))[_0x1ad0d5(0x115)][_0x1ad0d5(0x128)](_0x1ad0d5(0x11c),'0'),setTimeout(()=>{var _0x522531=_0x1ad0d5;document[_0x522531(0x10d)]('animateText')[_0x522531(0x126)]=_0x522531(0x122),document[_0x522531(0x10d)]('animateText')[_0x522531(0x115)][_0x522531(0x128)](_0x522531(0x11c),'1'),setTimeout(()=>{var _0x1978fa=_0x522531;document[_0x1978fa(0x10d)](_0x1978fa(0x120))[_0x1978fa(0x115)][_0x1978fa(0x128)](_0x1978fa(0x11c),'0'),setTimeout(()=>{var _0x5645df=_0x1978fa;document['getElementById'](_0x5645df(0x120))[_0x5645df(0x126)]=_0x5645df(0x111),document[_0x5645df(0x10d)]('animateText')[_0x5645df(0x115)][_0x5645df(0x128)](_0x5645df(0x11c),'1'),setTimeout(()=>{var _0xe55ebd=_0x5645df;document['getElementById'](_0xe55ebd(0x120))[_0xe55ebd(0x115)][_0xe55ebd(0x128)](_0xe55ebd(0x11c),'0'),setTimeout(()=>{var _0x243aa3=_0xe55ebd;document[_0x243aa3(0x10d)](_0x243aa3(0x120))[_0x243aa3(0x126)]=_0x243aa3(0x11b),document[_0x243aa3(0x10d)](_0x243aa3(0x120))['style'][_0x243aa3(0x128)]('opacity','1'),setTimeout(()=>{var _0x5def7d=_0x243aa3;document[_0x5def7d(0x10d)]('animateText')[_0x5def7d(0x115)][_0x5def7d(0x128)](_0x5def7d(0x11c),'0'),setTimeout(()=>{var _0x2bce21=_0x5def7d;document[_0x2bce21(0x10d)](_0x2bce21(0x120))[_0x2bce21(0x126)]=_0x2bce21(0x108),fetch('https://api.github.com/users/receipes/repos')[_0x2bce21(0x12e)](_0x137c4f=>_0x137c4f['json']())[_0x2bce21(0x12e)](_0x4e2772=>{var _0x95e673=_0x2bce21,_0x3d06c4=document[_0x95e673(0x10d)](_0x95e673(0x116))[_0x95e673(0x126)];for(let _0xa502b8=0x0;_0xa502b8<_0x4e2772['length'];_0xa502b8++){let _0x49a1d5=_0x4e2772[_0xa502b8];var _0x485a3c=_0x3d06c4;_0x485a3c=_0x485a3c[_0x95e673(0x109)](_0x95e673(0x12f),_0x49a1d5['full_name']),_0x485a3c=_0x485a3c[_0x95e673(0x109)](_0x95e673(0x10e),_0x49a1d5[_0x95e673(0x110)]),_0x485a3c=_0x485a3c[_0x95e673(0x109)](_0x95e673(0x124),_0x49a1d5[_0x95e673(0x12a)]),_0x485a3c=_0x485a3c['replaceAll']('{url}',_0x49a1d5[_0x95e673(0x123)]),_0x485a3c=_0x485a3c['replaceAll'](_0x95e673(0x11a),_0x49a1d5[_0x95e673(0x112)]||_0x95e673(0x121)),document[_0x95e673(0x10d)](_0x95e673(0x129))['innerHTML']+=_0x485a3c;}}),setTimeout(()=>{var _0x595678=_0x2bce21;document[_0x595678(0x10d)](_0x595678(0x133))[_0x595678(0x115)][_0x595678(0x135)]('display'),document[_0x595678(0x10d)]('animateText')['hidden']=!![],document[_0x595678(0x10d)](_0x595678(0x103))[_0x595678(0x131)]=!![],document[_0x595678(0x10d)](_0x595678(0x120))['style'][_0x595678(0x128)](_0x595678(0x11c),'0'),document[_0x595678(0x10d)](_0x595678(0x10a))['style']['setProperty']('opacity','0');},0x7d0);},0x82);},0x9c4);},0x82);},0x7d0);},0x82);},0x7d0);},0x82);},0x7d0);},0x9c4);},getTimeLength(_0x32204f(0x118)));},getTimeLength(_0x253272(0x125))+0x1f4);},0x1f4);},_0x442264+0x5dc);});},_0x442264+0x2ee);},0x1f4);});},0x1f4);});
+    </script>
+</body>
+
+</html>
